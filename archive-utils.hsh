@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#pack file
+pack(){
+  tar -czvf "${1///}.tar.gz" $@
+  echo "${1///}.tar.gz"
+  echo $@
+}
+
+unpack(){
+  tar -xzvf "$1"
+}
+
+securePack(){
+  pack $1
+  gpg -r $email -e "${1///}.tar.gz" 
+  shred -u "${1///}.tar.gz"
+}
+
+secureUnpack(){
+  gpg -d $1 > ${1/.gpg/}
+  unpack ${1/.gpg/}
+}

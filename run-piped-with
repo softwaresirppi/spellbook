@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "$@"
+cp /dev/stdin /tmp/script.sh 
+chmod +x /tmp/script.sh
+/tmp/script.sh "$@"

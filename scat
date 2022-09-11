@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while read line
+do
+	if [[ ${line:0:1} == '>' ]]; then
+		eval ${line#>}
+	else
+		echo "$line"
+	fi
+done < "$1"

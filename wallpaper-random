@@ -1,0 +1,2 @@
+#!/bin/sh
+gsettings set org.mate.background picture-filename "$(find $HOME/wallpapers | shuf -n 1)"

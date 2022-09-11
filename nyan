@@ -1,0 +1,2 @@
+#!/bin/bash
+mpv clips/music/nyan_cat.mp3 & sleep 3.7 && nyancat

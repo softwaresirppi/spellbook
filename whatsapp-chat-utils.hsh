@@ -1,0 +1,3 @@
+readMore="$(repeat ' ' 3072)"
+readMoreMini="$(repeat ' ' 768)"
+nothing='‎'

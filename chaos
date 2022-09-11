@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+while :
+do
+  xdotool mousemove_relative -- $(($RANDOM % 1000 - 500)) $(($RANDOM % 1000 - 500))
+
+done    
